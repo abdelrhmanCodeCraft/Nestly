@@ -1,11 +1,16 @@
 "use client";
 
 import { Facebook, Linkedin, Twitter, Youtube } from "lucide-react";
+import { ReactNode } from "react";
+
 
 interface FooterColumnProps {
   title: string;
   items: string[];
   orderClass?: string;
+}
+interface SocialIconProps {
+  children: ReactNode;
 }
 
 
@@ -130,7 +135,7 @@ function FooterColumn({ title, items, orderClass = "" }: FooterColumnProps) {
   );
 }
 
-function SocialIcon({ children }) {
+function SocialIcon({ children }: SocialIconProps) {
   return (
     <div className="
       w-7 h-7 sm:w-8 sm:h-8
