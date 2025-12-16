@@ -30,7 +30,7 @@ const investmentFeatures: InvestmentFeature[] = [
 ];
 
 const IconComponent = ({ name }: { name: string }) => {
-  const icons: { [key: string]: JSX.Element } = {
+  const icons: { [key: string]: React.ReactNode } = {
     MarketInsight: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 text-purple-400"><path d="M3 3v18h18"/><path d="m18 15-6-6-4 4-2-2"/></svg>,
     ROIAssessment: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 text-purple-400"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>,
     CustomizedStrategies: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 text-purple-400"><path d="M10 10v.01"/><path d="M12 12v.01"/><path d="M14 14v.01"/><path d="M16 16v.01"/><circle cx="12" cy="12" r="10"/></svg>,
