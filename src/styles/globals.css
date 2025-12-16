@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+
+@layer base {
+  :root {
+    --primary: #703BF7;
+    --secondary: #A685FA;
+    --background: #1A1A1A;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+     background-color: #141414 !important;
+    color: #FFFFFF; 
+  }
+}
+
+@layer components {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80rem; 
+  }
+
+  .btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem; 
+    font-weight: 500; 
+    transition: all 300ms; 
+    outline: none;
+  }
+
+  .btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(112, 59, 247, 0.25); 
+  }
+
+  .btn-primary {
+    background-color: #703BF7;
+    color: #ffffff;
+  }
+
+  .btn-primary:hover {
+    background-color: #5A2BD6;
+  }
+
+  .btn-primary:focus {
+    box-shadow: 0 0 0 2px rgba(112, 59, 247, 0.25);
+  }
+
+  .btn-secondary {
+    background-color: #A685FA;
+    color: #ffffff;
+  }
+
+  .btn-secondary:hover {
+    background-color: #9373E1;
+  }
+
+  .btn-secondary:focus {
+    box-shadow: 0 0 0 2px rgba(166, 133, 250, 0.25);
+  }
+
+  .btn-outline {
+    border: 1px solid #703BF7;
+    color: #703BF7;
+    background-color: transparent;
+  }
+
+  .btn-outline:hover {
+    background-color: #703BF7;
+    color: #ffffff;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
