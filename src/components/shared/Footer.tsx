@@ -3,34 +3,23 @@
 import { Facebook, Linkedin, Twitter, Youtube } from "lucide-react";
 import { ReactNode } from "react";
 
-
 interface FooterColumnProps {
   title: string;
   items: string[];
   orderClass?: string;
 }
+
 interface SocialIconProps {
   children: ReactNode;
 }
 
-
 export default function Footer() {
   return (
     <footer className="bg-[#0f0f0f] text-white pt-12 md:pt-16 lg:pt-20 pb-8 md:pb-10">
-
       <div className="max-w-[1596px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 2xl:px-24">
-
-        <div className="
-          grid 
-          grid-cols-1 
-          sm:grid-cols-2 
-          md:grid-cols-3 
-          lg:grid-cols-5 
-          gap-8 md:gap-10 lg:gap-12
-        ">
-
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-10 lg:gap-12">
+          
           <div className="sm:col-span-2 md:col-span-3 lg:col-span-2 order-1">
-            
             <div className="flex items-center gap-3 mb-6 justify-center sm:justify-start">
               <div className="w-10 h-10 bg-gradient-to-br from-[#703BF7] to-[#A685FA] rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">N</span>
@@ -48,7 +37,6 @@ export default function Footer() {
               <button className="ml-3 text-white hover:text-[#A685FA] transition">📨</button>
             </div>
           </div>
-
 
           <FooterColumn
             title="Home"
@@ -85,18 +73,12 @@ export default function Footer() {
             items={["Contact Form", "Our Offices"]}
             orderClass="order-6 sm:order-6 md:order-6 lg:order-6"
           />
-
         </div>
       </div>
 
       <div className="w-full border-t border-[#222] mt-10 md:mt-14 lg:mt-16 mb-6 md:mb-8"></div>
 
-      <div className="
-        container px-4 sm:px-6 md:px-8 lg:px-[5%] xl:px-[162px] 
-        mx-auto 
-        flex flex-col-reverse md:flex-row justify-between items-center gap-4 md:gap-6
-      ">
-
+      <div className="container px-4 sm:px-6 md:px-8 lg:px-[5%] xl:px-[162px] mx-auto flex flex-col-reverse md:flex-row justify-between items-center gap-4 md:gap-6">
         <p className="text-gray-400 text-xs sm:text-sm text-center md:text-left order-3 md:order-1 mt-4 md:mt-0">
           ©2023 Nestly. All Rights Reserved.
         </p>
@@ -111,7 +93,6 @@ export default function Footer() {
           <SocialIcon><Twitter size={16} className="w-4 h-4 sm:w-5 sm:h-5" /></SocialIcon>
           <SocialIcon><Youtube size={16} className="w-4 h-4 sm:w-5 sm:h-5" /></SocialIcon>
         </div>
-
       </div>
     </footer>
   );
@@ -123,10 +104,7 @@ function FooterColumn({ title, items, orderClass = "" }: FooterColumnProps) {
       <h4 className="font-semibold mb-3 md:mb-4 text-sm sm:text-base">{title}</h4>
       <ul className="space-y-1.5 md:space-y-2 text-gray-400 text-xs sm:text-sm">
         {items.map((item, i) => (
-          <li
-            key={i}
-            className="hover:text-white transition cursor-pointer py-1"
-          >
+          <li key={i} className="hover:text-white transition cursor-pointer py-1">
             {item}
           </li>
         ))}
