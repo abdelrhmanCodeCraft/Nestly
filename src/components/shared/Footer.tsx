@@ -2,6 +2,13 @@
 
 import { Facebook, Linkedin, Twitter, Youtube } from "lucide-react";
 
+interface FooterColumnProps {
+  title: string;
+  items: string[];
+  orderClass?: string;
+}
+
+
 export default function Footer() {
   return (
     <footer className="bg-[#0f0f0f] text-white pt-12 md:pt-16 lg:pt-20 pb-8 md:pb-10">
@@ -105,7 +112,7 @@ export default function Footer() {
   );
 }
 
-function FooterColumn({ title, items, orderClass = "" }) {
+function FooterColumn({ title, items, orderClass = "" }: FooterColumnProps) {
   return (
     <div className={`${orderClass} text-center sm:text-left`}>
       <h4 className="font-semibold mb-3 md:mb-4 text-sm sm:text-base">{title}</h4>
